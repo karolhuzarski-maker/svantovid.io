@@ -1,41 +1,61 @@
 export type Language = 'en' | 'pl'
 
 const en = {
-  seo: { title: 'SVANTOVID — Independent computer vision validation', description: 'Independent validation of computer-vision models in hidden, controlled scenarios for safety-critical environments.' },
-  nav: { method: 'Method', evidence: 'Evidence', why: 'Why SVANTOVID', founder: 'Founder', contact: 'Contact', label: 'Select language', menu: 'Navigation' },
-  hero: { kicker: 'Reality vs. Digital Brain.', lead: 'A digital crash test for autonomous systems.', body: 'Independent validation of computer-vision models in hidden, controlled scenarios before deployment in safety-critical environments.', primary: 'See how the test works', secondary: 'Talk to the founder', label: 'Illustrative controlled-test visualization', alt: 'Illustrative raw input for a controlled computer-vision test', fallback: 'RAW INPUT ASSET' },
-  problem: { label: 'THE HUMAN CONSEQUENCE', title: 'A model can pass the benchmark. And still miss a person.', body: 'A critical miss is not merely a lower score. In the field, it is a person the system did not see.', baseline: 'A benchmark asks', audit: 'An independent audit asks', questions: ['HOW MANY?', 'WHO WAS MISSED?', 'WHEN?', 'UNDER WHAT CONDITIONS?', 'DID BUILD B CREATE A REGRESSION?'] },
-  evidence: { label: 'EVIDENCE / 01—03', title: 'From raw input to evidence.', note: 'Illustrative concept. It does not represent a completed commercial validation.', items: [
-    { title: 'RAW INPUT', caption: 'The model does not know the answer before the test.', alt: 'Illustrative raw input test frame', fallback: 'RAW INPUT ASSET' },
-    { title: 'EXPERT GROUND TRUTH', caption: 'Reference data is created and versioned before evaluation.', alt: 'Illustrative expert ground-truth layer', fallback: 'GROUND TRUTH ASSET' },
-    { title: 'MODEL OUTPUT / SVANTOVID AUDIT', caption: 'Every miss is connected to time, conditions and criticality.', alt: 'Illustrative model output with SVANTOVID audit', fallback: 'AUDIT OUTPUT ASSET' }
+  seo: { title: 'SVANTOVID — Independent computer vision validation', description: 'Independent computer vision validation in hidden, controlled scenarios for safety-critical autonomous systems.' },
+  skip: 'Skip to content',
+  nav: { home: 'SVANTOVID home', menu: 'Open navigation', close: 'Close navigation', navigation: 'Main navigation', method: 'Method', evidence: 'Evidence', why: 'Why SVANTOVID', founder: 'Founder', contact: 'Contact', language: 'Select language' },
+  hero: { alt: 'Raw input from a controlled computer vision test', label: 'Early-stage validation platform', tagline: 'Reality vs. Digital Brain.', title: 'A digital crash test for autonomous systems.', body: 'Independent computer vision validation in hidden, controlled scenarios - before deployment in safety-critical environments.', primary: 'See how the test works', secondary: 'Talk to the founder' },
+  problem: { eyebrow: 'The problem', title: 'A model can pass the benchmark. And still miss a person.', body: 'In safety-critical systems, an average score is not enough. You need to know who was missed, when the model failed and under which conditions the failure may return.', questions: ['How many people were missed?', 'Who was not detected?', 'When did the model fail?', 'Does the next build repeat the same error?'] },
+  evidence: { eyebrow: 'Evidence sequence', title: 'One scene. Three layers of truth.', note: 'Demonstration material - illustrative audit logic.', fallback: 'Visual evidence will appear here once the controlled material is available.', items: [
+    { label: '01 - Raw input', text: 'The unaltered scene is the input: no answer is exposed to the model.', alt: 'Raw input frame from a controlled test' },
+    { label: '02 - Verified ground truth', text: 'A manually verified reference establishes what is actually present.', alt: 'Verified ground truth for the controlled test frame' },
+    { label: '03 - Model output and audit', text: 'Output is compared with the reference to reveal misses, false positives and regressions.', alt: 'Model output compared in an independent audit' }
   ] },
-  method: { label: 'METHOD / CONTROLLED & HIDDEN', title: 'We do not build another model. We build an independent test it has never seen.', steps: [ ['HIDE','controlled scenario and conditions'], ['DESCRIBE','versioned expert ground truth'], ['TEST','model through API or output file'], ['PROVE','audit, retest and A/B regression control'] ] },
-  decision: { label: 'AUDIT / DECISION', title: 'Evidence for a deployment decision.', states: ['DEPLOY','IMPROVE','STOP'], intro: 'The report can identify:', points: ['critical false negatives','error signature','visibility and scale','occlusion and conditions','evidence frame or short clip','A/B retest','regression control'], hidden: 'Full recordings and complete annotations remain hidden. The client receives evidence needed to diagnose and retest the failure.' },
-  why: { label: 'DEFENSIBILITY', title: 'Code can be copied. Test methodology is much harder.', pillars: ['Controlled scenarios','Hidden and rotating test sets','Versioned expert ground truth','Error criticality, not only detection count'] },
-  uses: { label: 'DESIGNED FOR', title: 'Designed for safety-critical vision.', items: ['UAV and aerial vision','Autonomous and remotely operated robots','Emergency response','Critical infrastructure and security systems'] },
-  founder: { label: 'FOUNDER / FIELD EXPERIENCE', title: 'Built from field reality, not from a desk.', name: 'Karol Huzarski', bio: ['Paramedic and public-health specialist','Operational experience at Kandahar Airfield','OSCE SMM mission experience','STOP THE BLEED and CLS instructor','UAV pilot','Former Shell Finance and Digital Force experience'], status: 'Early demonstrator in development. Open to pilot and technical partnerships.' },
-  final: { label: 'PILOT & TECHNICAL PARTNERSHIPS', title: 'Before a model enters the field, let it face SVANTOVID.', cta: 'Start a conversation', email: 'hello@svantovid.io' },
-  footer: 'Independent computer vision validation', skip: 'Skip to content'
+  method: { eyebrow: 'Independent method', title: 'The model does not watch a presentation. It faces a test.', steps: [
+    ['HIDE', 'The scenario remains unknown to the team developing the model.'],
+    ['DESCRIBE', 'A manually verified ground truth is defined.'],
+    ['TEST', 'The model analyses material without prior tuning to the specific test.'],
+    ['PROVE', 'The result shows detections, misses, false positives and regressions.']
+  ] },
+  decision: { eyebrow: 'Deployment decision', title: 'DEPLOY / IMPROVE / STOP', body: 'The outcome is not another impressive dashboard. The outcome is a better decision: deploy, improve or stop.' },
+  why: { eyebrow: 'Why SVANTOVID', title: 'Code can be copied. Independent methodology and credible scenarios are much harder to replicate.', items: [
+    ['Independent by design', 'Evaluation is separated from the model producer and its development assumptions.'],
+    ['Controlled evidence', 'Controlled scenarios meet manually verified ground truth before any conclusion is drawn.'],
+    ['Human-relevant errors', 'Reporting focuses on failures that matter to people and deployment decisions.']
+  ] },
+  uses: { eyebrow: 'Potential applications', title: 'Built for vision where failure has consequences.', note: 'The platform is being developed for validation work across:', items: ['UAV and unmanned systems', 'Robotics', 'Emergency response', 'Critical infrastructure'] },
+  founder: { eyebrow: 'Founder', title: 'Karol Huzarski - Founder', bio: 'Paramedic and public health specialist with experience in emergency medicine, international high-risk environments and financial and technology analysis. STOP THE BLEED® instructor, UAV pilot and founder of the Civil Resilience Foundation.', status: 'Building the methodology and early demonstrator.' },
+  final: { eyebrow: 'Start with evidence', title: 'Before a model enters the field, let it face SVANTOVID.', cta: 'Let’s talk about validation', alt: 'SVANTOVID brand lockup' },
+  footer: { line: 'Independent computer vision validation' }
 }
 
 const pl: typeof en = {
-  seo: { title: 'SVANTOVID — Niezależna walidacja computer vision', description: 'Niezależna walidacja modeli computer vision w ukrytych, kontrolowanych scenariuszach dla środowisk krytycznych.' },
-  nav: { method: 'Metoda', evidence: 'Dowód', why: 'Dlaczego SVANTOVID', founder: 'Założyciel', contact: 'Kontakt', label: 'Wybierz język', menu: 'Nawigacja' },
-  hero: { kicker: 'Reality vs. Digital Brain.', lead: 'Cyfrowy test zderzeniowy dla systemów autonomicznych.', body: 'Niezależna walidacja modeli computer vision w ukrytych, kontrolowanych scenariuszach przed wdrożeniem w środowiskach krytycznych dla bezpieczeństwa.', primary: 'Zobacz, jak działa test', secondary: 'Porozmawiaj z założycielem', label: 'Ilustracyjna wizualizacja kontrolowanego testu', alt: 'Ilustracyjny surowy obraz kontrolowanego testu computer vision', fallback: 'ZASÓB: SUROWY OBRAZ' },
-  problem: { label: 'LUDZKA KONSEKWENCJA', title: 'Model może zdać benchmark. I nadal przeoczyć człowieka.', body: 'Krytyczne pominięcie to nie tylko niższy wynik. W terenie oznacza człowieka, którego system nie zobaczył.', baseline: 'Benchmark pyta', audit: 'Niezależny audyt pyta', questions: ['ILE?', 'KOGO POMINIĘTO?', 'KIEDY?', 'W JAKICH WARUNKACH?', 'CZY BUILD B WYWOŁAŁ REGRESJĘ?'] },
-  evidence: { label: 'DOWÓD / 01—03', title: 'Od surowego obrazu do dowodu.', note: 'Wizualizacja koncepcji. Nie przedstawia zakończonej walidacji komercyjnej.', items: [
-    { title: 'SUROWY OBRAZ', caption: 'Model nie zna odpowiedzi przed testem.', alt: 'Ilustracyjna surowa klatka testowa', fallback: 'ZASÓB: SUROWY OBRAZ' },
-    { title: 'EKSPERCKI GROUND TRUTH', caption: 'Dane referencyjne powstają i są wersjonowane przed oceną.', alt: 'Ilustracyjna warstwa eksperckiego ground truth', fallback: 'ZASÓB: GROUND TRUTH' },
-    { title: 'WYNIK MODELU / AUDYT SVANTOVID', caption: 'Każdy błąd łączymy z czasem, warunkami i krytycznością.', alt: 'Ilustracyjny wynik modelu z audytem SVANTOVID', fallback: 'ZASÓB: WYNIK AUDYTU' }
+  seo: { title: 'SVANTOVID — Niezależna walidacja computer vision', description: 'Niezależna walidacja modeli computer vision w ukrytych, kontrolowanych scenariuszach dla autonomicznych systemów krytycznych.' },
+  skip: 'Przejdź do treści',
+  nav: { home: 'Strona główna SVANTOVID', menu: 'Otwórz nawigację', close: 'Zamknij nawigację', navigation: 'Nawigacja główna', method: 'Metoda', evidence: 'Dowód', why: 'Dlaczego SVANTOVID', founder: 'Założyciel', contact: 'Kontakt', language: 'Wybierz język' },
+  hero: { alt: 'Surowy obraz z kontrolowanego testu computer vision', label: 'Platforma na etapie rozwoju', tagline: 'Reality vs. Digital Brain.', title: 'Cyfrowy test zderzeniowy dla systemów autonomicznych.', body: 'Niezależna walidacja modeli computer vision w ukrytych, kontrolowanych scenariuszach - zanim trafią do środowisk krytycznych dla bezpieczeństwa.', primary: 'Zobacz, jak działa test', secondary: 'Porozmawiaj z założycielem' },
+  problem: { eyebrow: 'Problem', title: 'Model może zdać benchmark. I nadal przeoczyć człowieka.', body: 'W systemach krytycznych nie wystarczy wiedzieć, jak model wypada średnio. Trzeba wiedzieć, kogo przeoczył, kiedy zawiódł i w jakich warunkach błąd może się powtórzyć.', questions: ['Ilu ludzi model przeoczył?', 'Kogo nie rozpoznał?', 'W którym momencie zawiódł?', 'Czy nowa wersja powtarza ten sam błąd?'] },
+  evidence: { eyebrow: 'Sekwencja dowodu', title: 'Jedna scena. Trzy warstwy prawdy.', note: 'Materiał demonstracyjny - przykładowa logika audytu.', fallback: 'Materiał dowodowy pojawi się tutaj po udostępnieniu kontrolowanych zasobów.', items: [
+    { label: '01 - Surowy obraz', text: 'Niezmieniona scena jest wejściem: model nie otrzymuje prawidłowej odpowiedzi.', alt: 'Surowa klatka z kontrolowanego testu' },
+    { label: '02 - Zweryfikowany ground truth', text: 'Ręcznie zweryfikowany punkt odniesienia określa, co rzeczywiście znajduje się w scenie.', alt: 'Zweryfikowany ground truth kontrolowanej klatki testowej' },
+    { label: '03 - Wynik modelu i audyt', text: 'Wynik jest porównywany z referencją, ujawniając przeoczenia, false positives i regresje.', alt: 'Wynik modelu porównany w niezależnym audycie' }
   ] },
-  method: { label: 'METODA / KONTROLOWANA I UKRYTA', title: 'Nie budujemy kolejnego modelu. Budujemy niezależny test, którego model wcześniej nie widział.', steps: [ ['UKRYJ','scenariusz i warunki'], ['OPISZ','wersjonowane dane referencyjne eksperta'], ['TESTUJ','model przez API albo plik wynikowy'], ['UDOWODNIJ','audyt, retest i kontrola regresji A/B'] ] },
-  decision: { label: 'AUDYT / DECYZJA', title: 'Dowód do decyzji o wdrożeniu.', states: ['WDROŻYĆ','POPRAWIĆ','ZATRZYMAĆ'], intro: 'Raport może wskazywać:', points: ['krytyczne false negatives','sygnaturę błędu','widoczność i skalę','okluzję i warunki','klatkę dowodową lub krótki klip','retest A/B','kontrolę regresji'], hidden: 'Pełne nagrania i komplet anotacji pozostają ukryte. Klient otrzymuje materiał potrzebny do diagnozy błędu i retestu.' },
-  why: { label: 'TRUDNOŚĆ ODTWORZENIA', title: 'Kod można odtworzyć. Metodologię testu — znacznie trudniej.', pillars: ['Kontrolowane scenariusze','Ukryte i rotowane zestawy testowe','Wersjonowane dane referencyjne eksperta','Krytyczność błędu, nie tylko liczba detekcji'] },
-  uses: { label: 'PROJEKTOWANY DLA', title: 'Projektowany dla systemów wizyjnych krytycznych dla bezpieczeństwa.', items: ['UAV i obserwacja z powietrza','Roboty autonomiczne i zdalnie sterowane','Ratownictwo i reagowanie kryzysowe','Infrastruktura krytyczna i systemy bezpieczeństwa'] },
-  founder: { label: 'ZAŁOŻYCIEL / DOŚWIADCZENIE TERENOWE', title: 'Problem nie powstał przy biurku.', name: 'Karol Huzarski', bio: ['Ratownik medyczny i specjalista zdrowia publicznego','Doświadczenie operacyjne w Kandahar Airfield','Doświadczenie w misji OSCE SMM','Instruktor STOP THE BLEED i CLS','Pilot UAV','Doświadczenie w Shell Finance i Digital Force'], status: 'Wczesny demonstrator w budowie. Projekt otwarty na partnerstwa pilotażowe i techniczne.' },
-  final: { label: 'PARTNERSTWA PILOTAŻOWE I TECHNICZNE', title: 'Zanim model trafi w teren, niech najpierw przejdzie SVANTOVID.', cta: 'Rozpocznij rozmowę', email: 'hello@svantovid.io' },
-  footer: 'Niezależna walidacja computer vision', skip: 'Przejdź do treści'
+  method: { eyebrow: 'Niezależna metoda', title: 'Model nie ogląda prezentacji. Model przechodzi test.', steps: [
+    ['UKRYJ', 'Scenariusz pozostaje nieznany dla zespołu rozwijającego model.'],
+    ['OPISZ', 'Definiowany jest ręcznie zweryfikowany ground truth.'],
+    ['TESTUJ', 'Model analizuje materiał bez wcześniejszego dopasowania do konkretnego testu.'],
+    ['UDOWODNIJ', 'Wynik pokazuje trafienia, przeoczenia, false positives i regresje.']
+  ] },
+  decision: { eyebrow: 'Decyzja wdrożeniowa', title: 'WDROŻYĆ / POPRAWIĆ / ZATRZYMAĆ', body: 'Wynikiem nie jest kolejny efektowny dashboard. Wynikiem ma być lepsza decyzja: wdrożyć, poprawić albo zatrzymać.' },
+  why: { eyebrow: 'Dlaczego SVANTOVID', title: 'Kod można skopiować. Niezależną metodologię i wiarygodne scenariusze znacznie trudniej.', items: [
+    ['Niezależność z założenia', 'Ocena pozostaje oddzielona od producenta modelu i założeń jego zespołu.'],
+    ['Kontrolowany dowód', 'Kontrolowane scenariusze łączą się z ręcznie zweryfikowanym ground truth.'],
+    ['Błędy istotne dla człowieka', 'Raport skupia się na błędach ważnych dla ludzi i decyzji wdrożeniowej.']
+  ] },
+  uses: { eyebrow: 'Potencjalne zastosowania', title: 'Dla systemów wizyjnych, w których błąd ma konsekwencje.', note: 'Platforma jest rozwijana z myślą o walidacji w obszarach:', items: ['UAV i systemy bezzałogowe', 'Robotyka', 'Ratownictwo i reagowanie kryzysowe', 'Infrastruktura krytyczna'] },
+  founder: { eyebrow: 'Założyciel', title: 'Karol Huzarski - Founder', bio: 'Ratownik medyczny i specjalista zdrowia publicznego. Doświadczenie w medycynie ratunkowej, środowiskach międzynarodowych wysokiego ryzyka oraz analizie finansowej i technologicznej. Instruktor STOP THE BLEED®, pilot UAV i założyciel Fundacji Odporności Cywilnej.', status: 'Rozwija metodologię i wczesny demonstrator.' },
+  final: { eyebrow: 'Zacznij od dowodu', title: 'Zanim model trafi w teren, niech najpierw przejdzie SVANTOVID.', cta: 'Porozmawiajmy o walidacji', alt: 'Lockup marki SVANTOVID' },
+  footer: { line: 'Niezależna walidacja systemów computer vision' }
 }
 
 export const translations = { en, pl }
