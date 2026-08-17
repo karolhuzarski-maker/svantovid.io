@@ -12,11 +12,9 @@ function SafeImage({ src, alt, fallback, className = '', eager = false }: SafeIm
   </div>
 }
 
-function Brand({ home, imageAlt }: { home: string; imageAlt: string }) {
-  const [missing, setMissing] = useState(false)
+function Brand({ home }: { home: string }) {
   return <a className="brand" href="#top" aria-label={home}>
-    {!missing && <img src={assets.logo} alt={imageAlt} onError={() => setMissing(true)} />}
-    {missing && <span>SVANTOVID</span>}
+    <span>SVANTOVID</span>
   </a>
 }
 
@@ -36,14 +34,24 @@ function App() {
     document.querySelector<HTMLMetaElement>('meta[property="og:description"]')?.setAttribute('content', t.seo.description)
   }, [lang, t.seo])
 
+  useEffect(() => {
+    if (!menuOpen) return
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', closeOnEscape)
+    return () => window.removeEventListener('keydown', closeOnEscape)
+  }, [menuOpen])
+
   const closeMenu = () => setMenuOpen(false)
   const navLinks = [['#method', t.nav.method], ['#evidence', t.nav.evidence], ['#why', t.nav.why], ['#founder', t.nav.founder]]
 
   return <>
     <a className="skip-link" href="#content">{t.skip}</a>
+    <div className="scanline" aria-hidden="true" />
     <header className="site-header">
       <div className="header-inner">
-        <Brand home={t.nav.home} imageAlt={t.final.alt} />
+        <Brand home={t.nav.home} />
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" aria-label={menuOpen ? t.nav.close : t.nav.menu} onClick={() => setMenuOpen(value => !value)}><span /><span /></button>
         <nav id="main-navigation" className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label={t.nav.navigation}>
           {navLinks.map(([href, label]) => <a href={href} key={href} onClick={closeMenu}>{label}</a>)}
@@ -97,6 +105,12 @@ function App() {
 
       <section className="section why" id="why" aria-labelledby="why-title"><div className="container">
         <p className="eyebrow">{t.why.eyebrow}</p><h2 id="why-title">{t.why.title}</h2>
+        <div className="acronym" aria-labelledby="acronym-title">
+          <h3 id="acronym-title">{t.why.acronym.title}</h3>
+          <p className="acronym-full">{t.why.acronym.full}</p>
+          <dl>{t.why.acronym.terms.map(([letter, word]) => <div key={`${letter}-${word}`}><dt>{letter}</dt><dd>{word}</dd></div>)}</dl>
+          <p className="acronym-description">{t.why.acronym.description}</p>
+        </div>
         <div className="why-grid">{t.why.items.map(([title, body], index) => <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{body}</p></article>)}</div>
       </div></section>
 
