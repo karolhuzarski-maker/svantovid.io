@@ -1,7 +1,13 @@
+import brain from '../../brain.png'
+import logo from '../../LOGO  white.png'
+import raw from '../../1 raw.png'
+import groundTruth from '../../2 gt.png'
+import output from '../../3 output.png'
+
 export const assets = {
-  brain: '/assets/svantovid-brain.png',
-  logo: '/assets/svantovid-logo-white.png',
-  raw: '/assets/1-raw.png',
-  groundTruth: '/assets/2-gt.png',
-  output: '/assets/3-output.png',
+  brain,
+  logo,
+  raw,
+  groundTruth,
+  output,
 } as const

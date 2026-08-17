@@ -4,4 +4,5 @@ build/
 screenshots/
 test-results/
 playwright-report/
+*.tsbuildinfo
 *.local
