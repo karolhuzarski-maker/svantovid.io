@@ -14,7 +14,9 @@ function SafeImage({ src, alt, fallback, className = '', eager = false }: SafeIm
 
 function Brand({ lang }: { lang: Language }) {
   return <a className="brand" href="#top" aria-label={lang === 'pl' ? 'SVANTOVID - strona główna' : 'SVANTOVID - home'}>
-    <span>SVANTOVID</span>
+    <svg viewBox="150 175 1250 300" aria-hidden="true" focusable="false">
+      <image href={assets.logoWhite} width="1536" height="1024" />
+    </svg>
   </a>
 }
 
