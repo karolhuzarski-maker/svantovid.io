@@ -18,7 +18,12 @@ const en = {
     ['PROVE', 'The result shows detections, misses, false positives and regressions.']
   ] },
   decision: { eyebrow: 'Deployment decision', title: 'DEPLOY / IMPROVE / STOP', body: 'The outcome is not another impressive dashboard. The outcome is a better decision: deploy, improve or stop.' },
-  why: { eyebrow: 'Why SVANTOVID', title: 'Code can be copied. Independent methodology and credible scenarios are much harder to replicate.', items: [
+  why: { eyebrow: 'Why SVANTOVID', title: 'Code can be copied. Independent methodology and credible scenarios are much harder to replicate.', acronym: {
+    title: 'The name describes the method.',
+    full: 'SVANTOVID - Safety Validation of AI in Non-disclosed Tests: Outputs Versus Independently Verified Data.',
+    terms: [['S', 'Safety'], ['V', 'Validation'], ['A', 'AI'], ['N', 'Non-disclosed'], ['T', 'Tests'], ['O', 'Outputs'], ['V', 'Versus'], ['I', 'Independently'], ['D', 'Data']],
+    description: 'The name encodes the method: non-disclosed tests, model outputs and independently verified reference data.'
+  }, items: [
     ['Independent by design', 'Evaluation is separated from the model producer and its development assumptions.'],
     ['Controlled evidence', 'Controlled scenarios meet manually verified ground truth before any conclusion is drawn.'],
     ['Human-relevant errors', 'Reporting focuses on failures that matter to people and deployment decisions.']
@@ -47,7 +52,12 @@ const pl: typeof en = {
     ['UDOWODNIJ', 'Wynik pokazuje trafienia, przeoczenia, false positives i regresje.']
   ] },
   decision: { eyebrow: 'Decyzja wdrożeniowa', title: 'WDROŻYĆ / POPRAWIĆ / ZATRZYMAĆ', body: 'Wynikiem nie jest kolejny efektowny dashboard. Wynikiem ma być lepsza decyzja: wdrożyć, poprawić albo zatrzymać.' },
-  why: { eyebrow: 'Dlaczego SVANTOVID', title: 'Kod można skopiować. Niezależną metodologię i wiarygodne scenariusze znacznie trudniej.', items: [
+  why: { eyebrow: 'Dlaczego SVANTOVID', title: 'Kod można skopiować. Niezależną metodologię i wiarygodne scenariusze znacznie trudniej.', acronym: {
+    title: 'Nazwa opisuje metodę.',
+    full: 'SVANTOVID - Safety Validation of AI in Non-disclosed Tests: Outputs Versus Independently Verified Data.',
+    terms: [['S', 'Safety'], ['V', 'Validation'], ['A', 'AI'], ['N', 'Non-disclosed'], ['T', 'Tests'], ['O', 'Outputs'], ['V', 'Versus'], ['I', 'Independently'], ['D', 'Data']],
+    description: 'Walidacja bezpieczeństwa AI w nieujawnionych testach - wyniki modelu kontra niezależnie zweryfikowane dane.'
+  }, items: [
     ['Niezależność z założenia', 'Ocena pozostaje oddzielona od producenta modelu i założeń jego zespołu.'],
     ['Kontrolowany dowód', 'Kontrolowane scenariusze łączą się z ręcznie zweryfikowanym ground truth.'],
     ['Błędy istotne dla człowieka', 'Raport skupia się na błędach ważnych dla ludzi i decyzji wdrożeniowej.']
