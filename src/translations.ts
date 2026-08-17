@@ -29,7 +29,7 @@ const en = {
     ['Human-relevant errors', 'Reporting focuses on failures that matter to people and deployment decisions.']
   ] },
   uses: { eyebrow: 'Potential applications', title: 'Built for vision where failure has consequences.', note: 'The platform is being developed for validation work across:', items: ['UAV and unmanned systems', 'Robotics', 'Emergency response', 'Critical infrastructure'] },
-  founder: { eyebrow: 'Founder', title: 'Karol Huzarski - Founder', bio: 'Paramedic and public health specialist with experience in emergency medicine, international high-risk environments and financial and technology analysis. STOP THE BLEED® instructor, UAV pilot and founder of the Civil Resilience Foundation.', status: 'Building the methodology and early demonstrator.' },
+  founder: { eyebrow: 'Founder', title: 'Karol Huzarski - Founder', bio: 'Paramedic and public health specialist with experience in emergency medicine, international high-risk environments, and financial and technology analysis. Combat Lifesaver (CLS) Instructor, STOP THE BLEED® Instructor, UAV pilot, and founder of the Civil Resilience Foundation.', status: 'Building the methodology and early demonstrator.' },
   final: { eyebrow: 'Start with evidence', title: 'Before a model enters the field, let it face SVANTOVID.', cta: 'Let’s talk about validation', alt: 'SVANTOVID brand lockup' },
   footer: { line: 'Independent computer vision validation' }
 }
@@ -63,7 +63,7 @@ const pl: typeof en = {
     ['Błędy istotne dla człowieka', 'Raport skupia się na błędach ważnych dla ludzi i decyzji wdrożeniowej.']
   ] },
   uses: { eyebrow: 'Potencjalne zastosowania', title: 'Dla systemów wizyjnych, w których błąd ma konsekwencje.', note: 'Platforma jest rozwijana z myślą o walidacji w obszarach:', items: ['UAV i systemy bezzałogowe', 'Robotyka', 'Ratownictwo i reagowanie kryzysowe', 'Infrastruktura krytyczna'] },
-  founder: { eyebrow: 'Założyciel', title: 'Karol Huzarski - Founder', bio: 'Ratownik medyczny i specjalista zdrowia publicznego. Doświadczenie w medycynie ratunkowej, środowiskach międzynarodowych wysokiego ryzyka oraz analizie finansowej i technologicznej. Instruktor STOP THE BLEED®, pilot UAV i założyciel Fundacji Odporności Cywilnej.', status: 'Rozwija metodologię i wczesny demonstrator.' },
+  founder: { eyebrow: 'Założyciel', title: 'Karol Huzarski - Founder', bio: 'Ratownik medyczny i specjalista zdrowia publicznego z doświadczeniem w medycynie ratunkowej, międzynarodowych środowiskach wysokiego ryzyka oraz analizie finansowej i technologicznej. Instruktor Combat Lifesaver (CLS) oraz STOP THE BLEED®, pilot UAV i założyciel Fundacji Odporności Cywilnej.', status: 'Rozwija metodologię i wczesny demonstrator.' },
   final: { eyebrow: 'Zacznij od dowodu', title: 'Zanim model trafi w teren, niech najpierw przejdzie SVANTOVID.', cta: 'Porozmawiajmy o walidacji', alt: 'Lockup marki SVANTOVID' },
   footer: { line: 'Niezależna walidacja systemów computer vision' }
 }
