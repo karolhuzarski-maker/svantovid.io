@@ -12,8 +12,8 @@ function SafeImage({ src, alt, fallback, className = '', eager = false }: SafeIm
   </div>
 }
 
-function Brand({ home }: { home: string }) {
-  return <a className="brand" href="#top" aria-label={home}>
+function Brand({ lang }: { lang: Language }) {
+  return <a className="brand" href="#top" aria-label={lang === 'pl' ? 'SVANTOVID - strona główna' : 'SVANTOVID - home'}>
     <span>SVANTOVID</span>
   </a>
 }
@@ -50,8 +50,8 @@ function App() {
     <a className="skip-link" href="#content">{t.skip}</a>
     <div className="scanline" aria-hidden="true" />
     <header className="site-header">
-      <div className="header-inner">
-        <Brand home={t.nav.home} />
+      <div className="container header-inner">
+        <Brand lang={lang} />
         <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" aria-label={menuOpen ? t.nav.close : t.nav.menu} onClick={() => setMenuOpen(value => !value)}><span /><span /></button>
         <nav id="main-navigation" className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label={t.nav.navigation}>
           {navLinks.map(([href, label]) => <a href={href} key={href} onClick={closeMenu}>{label}</a>)}
